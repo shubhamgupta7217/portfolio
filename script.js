@@ -98,16 +98,16 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     // Simple client-side validation passed — open mail client as default fallback
     const subject = encodeURIComponent("Portfolio inquiry from " + name);
     const body = encodeURIComponent(msg + "\n\n— " + name + " (" + email + ")");
-    window.location.href = `mailto:shubhamgupta7217@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:sshubhamshu@gmail.com?subject=${subject}&body=${body}`;
 });
 
 // Copy email button
 document.getElementById("copyEmail").addEventListener("click", async () => {
     try {
-        await navigator.clipboard.writeText("shubhamgupta7217@gmail.com");
+        await navigator.clipboard.writeText("sshubhamshu@gmail.com");
         alert("Email copied to clipboard");
     } catch (e) {
-        alert("Copy failed — email: shubhamgupta7217@gmail.com");
+        alert("Copy failed — email: sshubhamshu@gmail.com");
     }
 });
 
@@ -135,8 +135,8 @@ themeToggle.addEventListener("click", () => {
 document.getElementById("resume").addEventListener("click", (e) => {
     e.preventDefault();
     const a = document.createElement("a");
-    a.href = "https://example.com/your_resume.pdf";
-    // a.download = "YourName_Resume.pdf";
+    a.href = "Shubham_Gupta_Resume.pdf";
+    a.download = "Shubham_Gupta_Resume.pdf";
     a.click();
 });
 
@@ -144,3 +144,4 @@ document.getElementById("resume").addEventListener("click", (e) => {
 // window.addEventListener("keydown", (e) => {
 //     if (e.key === "g" && projects[0]) openModal(projects[0]);
 // });
+
