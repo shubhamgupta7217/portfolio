@@ -98,16 +98,16 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     // Simple client-side validation passed — open mail client as default fallback
     const subject = encodeURIComponent("Portfolio inquiry from " + name);
     const body = encodeURIComponent(msg + "\n\n— " + name + " (" + email + ")");
-    window.location.href = `mailto:sshubhamshu@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:shubh.amgx07@gmail.com?subject=${subject}&body=${body}`;
 });
 
 // Copy email button
 document.getElementById("copyEmail").addEventListener("click", async () => {
     try {
-        await navigator.clipboard.writeText("sshubhamshu@gmail.com");
+        await navigator.clipboard.writeText("shubh.amgx07@gmail.com");
         alert("Email copied to clipboard");
     } catch (e) {
-        alert("Copy failed — email: sshubhamshu@gmail.com");
+        alert("Copy failed — email: shubh.amgx07@gmail.com");
     }
 });
 
@@ -144,4 +144,5 @@ document.getElementById("resume").addEventListener("click", (e) => {
 // window.addEventListener("keydown", (e) => {
 //     if (e.key === "g" && projects[0]) openModal(projects[0]);
 // });
+
 
