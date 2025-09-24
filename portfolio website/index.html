@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shubham Gupta - Portfolio</title>
+    <meta name="description" content="Portfolio of Your Name — Web Developer / Designer" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <div class="logo">SG</div>
+                <div>
+                    <h1>Shubham Gupta</h1>
+                    <div class="muted" style="font-size:13px">B.Tech.(with Honours) • CS&E • Data Science</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="https://www.linkedin.com/in/shubhamgupta7217/" target="_blank">Linkedin</a>
+                <button class="btn" id="themeToggle" title="Toggle theme">🌓</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="intro card">
+                    <h2>Hi, I'm Shubham Gupta.</h2>
+                    <p>A B.Tech.(Honours) CS&E graduate with specialization in Data Science, strong foundations in CS
+                        Fundamentals, DSA and problem solving (GATE AIR 915, LeetCode rank &lt12k). Skilled in Python,
+                        Java, and SQL with hands-on projects in ML, algorithms, and software development, aiming to
+                        build scalable and impactful web apps, and ML-powered tech solutions.</p>
+                    <div class="cta">
+                        <a class="btn" href="#projects">See projects</a>
+                        <a class="btn ghost" href="#contact">Hire me</a>
+                    </div>
+
+                    <div class="space"></div>
+
+                    <div class="card" style="display:flex;gap:12px;align-items:center">
+                        <div>
+                            <div style="font-size:13px;color:var(--muted)">Experience</div>
+                            <div style="font-weight:700">Fresher</div>
+                        </div>
+                        <div style="flex:1" class="muted" />
+                        <div>
+                            <div style="font-size:13px;color:var(--muted)">Location</div>
+                            <div style="font-weight:700">India</div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside style="display:flex;flex-direction:column;gap:14px">
+                    <div class="card">
+                        <h3 style="margin:0 0 6px">CS Concepts</h3>
+                        <div class="skills" id="skills">
+                            <div class="skill">DS and Algo.</div>
+                            <div class="skill">OOP</div>
+                            <div class="skill">DBMS</div>
+                            <div class="skill">OS</div>
+                            <div class="skill">Networking</div>
+                            <div class="skill">System Design</div>
+                            <div class="skill">Machine Learning</div>
+                            <div class="skill">Data Science</div>
+                            <div class="skill">Mathematics</div>
+                            <div class="skill">Statistics</div>
+                            <div class="skill">EDA</div>
+                        </div>
+                        <br>
+                        <h3 style="margin:0 0 6px">Programming & Technical Skills</h3>
+                        <div class="skills" id="skills">
+                            <div class="skill">Algorithmic Problem Solving</div>
+                            <div class="skill">Java</div>
+                            <div class="skill">Python</div>
+                            <div class="skill">SQL</div>
+                            <div class="skill">Javascript</div>
+                            <div class="skill">HTML</div>
+                            <div class="skill">CSS</div>
+                            <div class="skill">React.js</div>
+                            <div class="skill">Node.js</div>
+                            <div class="skill">Numpy</div>
+                            <div class="skill">Pandas</div>
+                            <div class="skill">Matplotlib</div>
+                            <div class="skill">Seaborn</div>
+                            <div class="skill">Scikit-learn</div>
+                            <div class="skill">MySQL</div>
+                            <div class="skill">MongoDB</div>
+                            <div class="skill">Git & Github</div>
+                            <div class="skill">Prompt Engineering</div>
+                            <div class="skill">Excel and MS-Office</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="margin:0 0 6px">Resume</h3>
+                        <p class="muted" style="margin:0 0 12px">Up-to-date resume - downloadable</p>
+                        <a class="btn" href="#" id="resume">View Resume</a>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="projects" class="card" style="margin-bottom:18px">
+        <h2 style="margin-top:0">Projects</h2>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- project cards injected by JS -->
+        </div>
+      </section>
+
+            <section id="contact" class="card">
+                <h2 style="margin-top:0">Contact</h2>
+                <p class="muted">Want to work together? Send a quick message.</p>
+                <form class="contact-form" id="contactForm">
+                    <input id="name" placeholder="Your name" required />
+                    <input id="email" type="email" placeholder="Your Email" required />
+                    <textarea id="message" placeholder="Message" required></textarea>
+                    <div style="display:flex;gap:10px">
+                        <button class="btn" type="submit">Send</button>
+                        <button class="btn ghost" type="button" id="copyEmail">Copy Email</button>
+                    </div>
+                </form>
+            </section>
+
+            <footer class="muted">Made by Shubham Gupta • Built with HTML, CSS & vanilla JS</footer>
+        </main>
+    </div>
+
+    <!-- Modal for project details -->
+    <div class="modal-backdrop" id="modalBackdrop">
+        <div class="modal" role="dialog" aria-modal="true" id="projectModal">
+            <button id="closeModal"
+                style="float:right;background:transparent;border:none;color:var(--muted);font-size:18px">✕</button>
+            <h3 id="modalTitle">Project title</h3>
+            <p id="modalDesc" class="muted">Longer project description.</p>
+            <div style="height:14px"></div>
+            <div id="modalLinks" style="display:flex;gap:8px"></div>
+        </div>
+    </div>
+
+    <script type="text/JavaScript" src="./script.js" >
+    </script>
+</body>
+
+</html>
